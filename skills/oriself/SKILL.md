@@ -122,10 +122,16 @@ Action:
 
 Evidence:
   dimension: E/I | S/N | T/F | J/P
-  user_quote: string (4-300 字, 必须是用户某轮原话的字面子串)
-  round_number: int (必须 = 当前轮号)
+  user_quote: string (4-300 字, 必须是 round_number 对应那一轮 user_message 的字面子串)
+  round_number: int (忠实标注：quote 真正来自哪一轮就写哪一轮)
   confidence: float (0-1)
   interpretation: string (≤ 120 字, 可选)
+
+  # 注：guardrails 会做 O(1) 字面子串校验。两条路径都合法：
+  #   - 本轮抽 evidence：round_number = 当前轮, quote 是 <current_turn> 的子串
+  #   - 回引历史做上下文：round_number = 那一历史轮, quote 是该 <history_turn> 的子串
+  # 同一 (dimension, user_quote) 只计一次（去重在 advance_state 层），
+  # 回引不会虚增计数，只帮助 LLM 诚实地 grounding 自己的 reasoning。
 
 Contradiction:
   round_a: int        # 较早轮
@@ -150,23 +156,33 @@ QuizOption:
   text: string (1-160 字)
 
 ConvergeOutput:
-  mbti_type: string (^[EI][SN][TF][JP]$)
-  confidence_per_dim: object
+  # v2.3 · 单一真相源：confidence_per_dim 是 MBTI 字母的唯一源。
+  # runtime 会从这里派生 mbti_type 并覆盖下面两个 mbti_type 字段——
+  # 你不需要在多处写同一串字母，写一次就够。
+  confidence_per_dim:                    # ★ 真相源
+    E/I: { letter: E | I, score: 0-1 }
+    S/N: { letter: S | N, score: 0-1 }
+    T/F: { letter: T | F, score: 0-1 }
+    J/P: { letter: J | P, score: 0-1 }
+  mbti_type: string?                     # 可省；填了也会被派生值覆盖
   insight_paragraphs: list (恰好 3 段)
     - theme: string (2-40 字)
       body: string (60-500 字)
       quoted_rounds: list<int> (≥ 1)
   card: CardData
+  report_html: string                    # 完整 <!DOCTYPE...</html>
 
 CardData:
   title: string (4-40 字)
-  mbti_type: string
+  mbti_type: string?                     # 可省；同样会被派生值覆盖
   subtitle: string (≤ 60 字)
   pull_quotes: list (≤ 3)
     - text: string (4-300 字, 用户原话)
       round: int
   typography_hint: editorial_serif | editorial_mono | editorial_minimal
 ```
+
+**report_html 字母一致性**：HTML 里凡是要写 MBTI 4 字母串的地方（title / meta / footer / 维度区），先在 `confidence_per_dim` 里拼好那一个 4 字母，再让 HTML 里所有 4 字母串都是同一个字符串。guardrails 会 post-hoc 扫描 HTML，任一 4 字母串 ≠ 派生 mbti_type → reject。实操：先选好 4 个字母 → 拼成 `MBTI = "INFJ"` 这样在脑里 anchor → HTML 里写 `<h1>一个把问题还回去的 INFJ</h1>` 和维度区 `<div>{MBTI}</div>` 都用同一个值。
 
 ---
 
