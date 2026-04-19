@@ -1,3 +1,8 @@
+---
+name: reflective-listening
+description: 反射倾听。让用户感到"被听见"的唯一廉价手段——复述具体词 / 画面，再接下一步。
+---
+
 # Technique · 反射倾听
 
 > 让用户感到"被听见"的唯一廉价手段。

@@ -1,6 +1,11 @@
+---
+name: contradiction-probing
+description: 矛盾追问。深挖期工具；把对话里两处不一致温柔并置，让 TA 多看见一层自己。
+---
+
 # Technique · 矛盾追问
 
-> phase 4 深挖期的工具。是 OriSelf 洞见能"心里咯噔一下"的核心机制。
+> phase 4 深挖期的工具。是 Oriself 洞见能"心里咯噔一下"的核心机制。
 
 ## 核心信念
 

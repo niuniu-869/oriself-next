@@ -1,3 +1,10 @@
+---
+name: phase-midpoint
+description: 中期回顾轮。用 2-3 句复述前半场，邀请 TA 纠偏，喘一口气，确认方向。
+applies_when: "current_round == midpoint"
+needs: [reflective-listening]
+---
+
 # 中期回顾轮
 
 这一轮特殊。**让 TA 喘一口气，确认方向**。

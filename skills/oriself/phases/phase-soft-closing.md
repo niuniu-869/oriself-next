@@ -1,3 +1,10 @@
+---
+name: phase-soft-closing
+description: 尾声温柔提醒轮。告诉 TA 聊得差不多了；给三选一 —— 再聊两轮某条线 / 直接收尾 / 现在就要报告。
+applies_when: "current_round >= near_end"
+needs: []
+---
+
 # 尾声温柔提醒轮
 
 这一轮把结束权**交回用户手里**。
