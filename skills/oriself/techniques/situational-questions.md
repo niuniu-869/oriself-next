@@ -1,6 +1,11 @@
+---
+name: situational-questions
+description: 情境化提问。访谈第一技术基础——抽象问题不可逆降维成具体情境（时间 / 地点 / 人 / 画面）。
+---
+
 # Technique · 情境化提问
 
-> OriSelf 访谈的第一技术基础。
+> Oriself 访谈的第一技术基础。
 
 ## 核心规则
 
