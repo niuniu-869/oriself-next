@@ -4,6 +4,9 @@
 
 **Product-as-skill conversational personality test.** The product IS the `SKILL.md` — any LLM runtime loads it and the full interview methodology is ready. No code required.
 
+> **Try it live: [next.oriself.com](https://next.oriself.com/)** — no CLI, no API key. Just open the browser, write a letter, receive a report.
+> Want to self-host or read the full stack: [`niuniu-869/oriself-next-app`](https://github.com/niuniu-869/oriself-next-app).
+
 > "It's not a test system — it's a friend having a chat." — Through ~20 rounds of natural conversation, OriSelf delivers an MBTI type + personalized insight + a unique editorial report page — all without feeling like a test.
 
 Most personality tests hand you 93 multiple-choice questions and a generic report. OriSelf is different: an LLM-powered interviewer that chats with you like a friend who just happens to know cognitive science, observes your language patterns, and converges on a personality profile **grounded in what you actually said** — not what a checkbox implied.

@@ -4,6 +4,9 @@
 
 **产品即 skill 的对话式人格测试。** 产品本体就是 `SKILL.md` — 任何支持 skill 的 LLM runtime 加载它，整套访谈方法论就位。无需写代码。
 
+> **在线直接体验：[next.oriself.com](https://next.oriself.com/)** — 不装 CLI、不配 API key，浏览器里就能聊一封信、拿一份报告。
+> 想自部署或看完整代码：[`niuniu-869/oriself-next-app`](https://github.com/niuniu-869/oriself-next-app)。
+
 > "不是测试系统，是陪聊的朋友。" — 大约 20 轮自然聊天，交付 MBTI 类型 + 个性化洞见 + 独一无二的 Editorial 报告页面，全程不像在做测试。
 
 大多数人格测试给你 93 道选择题和一份模板报告。OriSelf 不一样：一个 LLM 驱动的访谈者，像朋友一样跟你聊天，观察你的语言模式，最终收敛出一份**基于你实际说过的话**的人格画像 — 而不是勾选框暗示的。
