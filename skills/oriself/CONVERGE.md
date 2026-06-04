@@ -31,10 +31,7 @@ loaded_when: "converge_triggered"
 1. **HTML 完整性**：能被标准 HTML parser 成功解析。开头 `<!doctype html>`（大小写不敏感），有 `<html>`、`<head>`、`<body>`。
 2. **MBTI 四字母唯一一致**：HTML 的可见文本里，正则 `[EI][SN][TF][JP]` 命中的每一处都**必须是同一个字符串**。换句话说：只要你选了 `INTP`，整份 HTML 里就不能再出现 `INFP` `INTJ` 这种串。服务端会用第一个出现的 4 字母作为最终 `mbti_type`。
 3. **`<title>` 就是 card 标题**：服务端会把 `<title>` 里的文字作为 `card_title` 存库（给"最近信件"列表用）。**不要**把 MBTI 四字母放进 `<title>`——它是名片标题，不是类型标签。长度 4-40 字，走你的 aesthetic 气质。
-4. **安全铁则 · 只有三条（违反会被打回重写）**：
-   - 不许 `<script>` 或内联事件处理器（`onclick=` `onerror=` `onload=` 这类）或 `javascript:` URL
-   - 不许 `<iframe>` `<object>` `<embed>` `<form>` `<input>`
-   - 不许外链脚本（`<script src="…">`）；**允许**外链 Google Fonts CSS 和图片
+4. **安全**：用 HTML + CSS（含 `@keyframes` 动画）和外链 Google Fonts CSS / 图片来表达，做一份能直接安全渲染的静态页。服务端会自动校验安全性、不合规会打回——你专注把页面做好即可。
 
 除此之外代码怎么写、样式怎么排、视觉怎么设计——没有任何限制。
 

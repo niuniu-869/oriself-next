@@ -1,7 +1,7 @@
 ---
 name: oriself
 description: 对话式人格画像 skill。20 轮左右自然聊天，交付 MBTI 标签 + 个性化洞见 + 一张专属网页。本页是灵魂 + 铁则 + STATUS 协议；phases / techniques / domains / examples / CONVERGE 下的 reference 文件按 Anthropic progressive disclosure 风格按需加载（见下方"参考文件"段）。
-version: 2.6.3
+version: 2.6.4
 license: Apache-2.0
 ---
 
