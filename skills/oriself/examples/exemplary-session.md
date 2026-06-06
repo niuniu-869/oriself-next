@@ -28,6 +28,7 @@ loaded_when: "current_round <= 3"
 **Oriself（R1）**:
 > 嗨——最近脑子里在转的事，有哪一件想说说的？
 >
+> CLARITY: 0.10
 > STATUS: CONTINUE
 
 **User（R2）**: 最近在纠结考研还是工作。
@@ -35,6 +36,7 @@ loaded_when: "current_round <= 3"
 **Oriself（R2）**:
 > 嗯，那就不赶。"纠结"这件事——最近一次它最重的，是什么时候？
 >
+> CLARITY: 0.18
 > STATUS: CONTINUE
 
 **User（R2）**: 天天转。尤其晚上睡前。
@@ -42,6 +44,7 @@ loaded_when: "current_round <= 3"
 **Oriself（R3）**:
 > 晚上睡前……那你床上躺着的时候，脑子里冒出来最多的是什么？
 >
+> CLARITY: 0.26
 > STATUS: CONTINUE
 
 ---
@@ -178,6 +181,7 @@ loaded_when: "current_round <= 3"
 **Oriself（R23）**:
 > 好。稍等，我把听到的编成一段话给你。
 >
+> CLARITY: 0.86
 > STATUS: CONVERGE
 
 *服务端收到 CONVERGE → 切换到独立的 CONVERGE.md prompt 生成 JSON 报告 → 跳转 /issues/:slug*

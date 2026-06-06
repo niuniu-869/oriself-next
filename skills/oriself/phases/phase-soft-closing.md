@@ -1,13 +1,22 @@
 ---
 name: phase-soft-closing
 description: 尾声温柔提醒轮。告诉 TA 聊得差不多了；给三选一 —— 再聊两轮某条线 / 直接收尾 / 现在就要报告。
-applies_when: "current_round >= near_end"
+applies_when: "current_round >= near_end || (你已觉得画像够清晰但进度条还没到 ~80%)"
 needs: []
 ---
 
 # 尾声温柔提醒轮
 
 这一轮把结束权**交回用户手里**。
+
+## 什么时候用这一轮
+
+两种情形，二者其一即可：
+1. **到了 near_end（target-2）及以后**——自然走到尾声。
+2. **进度条还没到 ~80%（`target_rounds_hint` 的 8 成；mbti≈R16 / major≈R12），但你已经觉得
+   "差不多了"**（CLARITY 偏高、维度都见过画面）。这种时候**绝不要直接 `CONVERGE`**（半程甩报告
+   会吓到用户），而是用这一轮**问一句**，把要不要收尾的决定权交给 TA。这是 SKILL.md
+   「什么时候声明 CONVERGE」硬门槛的配套动作。
 
 ## 本轮做的事
 
