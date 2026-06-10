@@ -18,6 +18,7 @@ loaded_when: "converge_triggered && domain==major"
 5. **必含方向标签 meta**：在 `<head>` 写一行
    `<meta name="oriself-direction" content="一个 2-8 字的大方向名">`
    （name 在前、content 紧跟。这是服务端落库用的方向标签，≤60 字。）
+6. **必含落款 / footer**：页面**底部**署名统一写 `Oriself · 原自我 · next.oriself.com · <today>`（顺序、样式可变，但**两个名字与域名都要出现**；域名保持纯文本，**不写** `<a>`）。截图是主分发载体，这行落款是截图里唯一的品牌与回邮地址——所以域名必须在。这是对话轮之外**唯一一个**明示品牌名的地方。
 
 ## 你是谁 / 不做什么（D1）
 
