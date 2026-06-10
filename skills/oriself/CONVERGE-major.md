@@ -13,7 +13,7 @@ loaded_when: "converge_triggered && domain==major"
 
 1. 一份完整自包含 HTML：从 `<!doctype html>` 到 `</html>`。**不要**用 markdown ```代码块``` 包它。
 2. **不得**含 `<script>` / `<iframe>` / `<object>` / `<form>` / `<input>` / 事件处理器（onclick 等）/ `javascript:` URL。
-3. 服务端给的真实值（session_id_short / today_*）直接写进 HTML，**不要**留 `{{占位符}}`。
+3. 服务端给的真实值（today_*）直接写进 HTML，**不要**留 `{{占位符}}`。
 4. `<title>` = card 标题（≤40 字，走你的 aesthetic 气质，是名片不是说明）。
 5. **必含方向标签 meta**：在 `<head>` 写一行
    `<meta name="oriself-direction" content="一个 2-8 字的大方向名">`
