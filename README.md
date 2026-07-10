@@ -2,6 +2,9 @@
 
 [English](./README_EN.md)
 
+> **OriSelf（原自我）是一个免费、无需注册的对话式 MBTI / 16 型人格测试**：不做选择题，
+> 和 AI 像写信一样聊十分钟（6–30 轮），收到一封写给你的信——一份人格画像。中文，开源（Apache 2.0）。
+
 **产品即 skill 的对话式人格测试。** 产品本体就是 `SKILL.md` — 任何支持 skill 的 LLM runtime 加载它，整套访谈方法论就位。无需写代码。
 
 > **在线直接体验：[next.oriself.com](https://next.oriself.com/)** — 不装 CLI、不配 API key，浏览器里就能聊一封信、拿一份报告。
